@@ -16,25 +16,28 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>업로드 날짜</th>
+
+            <th th:width="100">제목</th>
+            <th th:width="100"}>작성자</th>
+            <th th:width="100"}>업로드 날짜</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="writing : ${writings}">
-            <td th:text="${writing.title}" th:href="@{/writing/{id} (id=${writing.id})}">제목</td>
-            <td th:text="${writing.userName}">작성자</td>
-            <td th:text="${writing.createDate}">업로드 날짜</td>
-            <td><a href="#" th:href="@{/writing/{id} (id=${writing.id})}">이동</a></td>
-            <td><a href="#" th:href="@{/writing/update/{id} (id=${writing.id})}">수정</a></td>
-            <td><a href="#" th:href="@{/writing/delete/{id} (id=${writing.id})}">삭제</a></td>
+            <td  th:text="${writing.title}" th:href="@{/writing/{id} (id=${writing.id})}">제목</td>
+            <td  th:text="${writing.userName}">작성자</td>
+            <td  th:text="${writing.createDate} ">업로드 날짜</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td th:width="100"><a href="#" th:href="@{/writing/{id} (id=${writing.id})}"> 이동</a></td>
+            <td th:width="100"><a href="#" th:href="@{/writing/update/{id} (id=${writing.id})}"> 수정</a></td>
+            <td th:width="100"><a href="#" th:href="@{/writing/delete/{id} (id=${writing.id})}"> 삭제</a></td>
         </tr>
         </tbody>
     </table>
 
     <div id="write">
         <div class="btn">
+            <body> &nbsp;&nbsp;</body>
             <a href="/writing">
                 <button type="button">글 작성</button>
             </a>

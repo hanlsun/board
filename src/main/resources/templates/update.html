@@ -9,18 +9,18 @@
 <div id="writing_area">
     <form th:action="@{/writing/update/{id} (id=${id})}" th:object="${form}" method="post">
         <div id="userName">
-            <label th:for="userName">작성자</label>
+            <div>작성자</div>
             <div th:text="'작성자(기존내용) : '+${userName}">작성자(기존내용)</div>
             <input type="text" th:field="*{userName}" placeholder="이름을 기입하세요.">
-        </div>
+        </div><br>
         <div id="title">
-            <label th:for="title">제목</label>
+            <div>제목</div>
             <div th:text="'제목(기존내용) : '+${title}">제목(기존내용)</div>
             <input type="text" th:field="*{title}" placeholder="제목을 입력하세요">
-        </div>
+        </div><br>
 
         <div id="context">
-            <label th:for="context">내용</label>
+            <div>내용</div>
             <div th:text="'내용(기존내용) : ' + ${context}">내용(기존내용)</div>
             <input type="text" th:field="*{context}" placeholder="내용을 입력하세요">
         </div>
